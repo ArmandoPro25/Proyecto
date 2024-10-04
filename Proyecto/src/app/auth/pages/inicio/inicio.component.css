@@ -1,0 +1,27 @@
+.introduccion {
+  padding: 20px; /*Espacio en los costados*/
+  text-align: center; /*Alineación del texto*/
+  font-size: 40px; /*Tamaño de letra*/
+  font-weight: bold; /*Modifica el texto*/
+  margin-top: 15px; /*Espacio en el margen superior*/
+  font-family: Constantia; /*Estilo del texto*/
+}
+
+.presentacion {
+  margin-top: -15px; /*Distancia del navbar*/
+  padding: 10px; /*Espacio en los costados*/
+  font-size: 16px; /*Tamaño de letra*/
+  line-height: 1.5; /*Espaciado entre renglones*/
+  color: #333; /*Color del texto*/
+  margin-left: 10%; /*Espacio en el margen izquierdo*/
+  margin-right: 10%; /*Espacio en el margen derecho*/
+  font-family: 'Constantia'; /*Estilo del texto*/
+  text-align: justify; /*Alineación del texto*/
+}
+
+body{
+  background-color: #2381a1; /*Color del fondo*/
+  font-family: Arial, sans-serif; /*Estilo de fuente*/
+  margin-top: -15px;
+  z-index: -1000;
+}

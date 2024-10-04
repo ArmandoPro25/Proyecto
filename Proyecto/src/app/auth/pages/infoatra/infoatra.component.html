@@ -1,0 +1,44 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="atractivo; else divLoading" class="grid p-2">
+
+    <mat-card class="col-12 sm:col-6">
+        <mat-card-header>
+          <mat-card-title>{{ atractivo.nombre }}</mat-card-title>
+          <mat-card-subtitle> {{atractivo.categoria }}</mat-card-subtitle>
+        </mat-card-header>
+
+       <img [src]="atractivo | atractivoImage" [alt]="atractivo.nombre" mat-card-image />
+
+    </mat-card>
+    <mat-card class="col-12 sm:col-6">
+          <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle>{{atractivo.nombre}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <mat-list>
+              <p>Tipología</p><mat-list-item>{{atractivo.tipologia}}</mat-list-item>
+              <p>Localización</p><mat-list-item>{{atractivo.localizacion}}</mat-list-item>
+              <p>Descripción</p><mat-list-item>{{atractivo.descripcion}}</mat-list-item>
+              <p>Accesibilidad</p><mat-list-item>{{atractivo.accesibilidad}}</mat-list-item>
+              <p>Actividades</p><mat-list-item>{{atractivo.actividades}}</mat-list-item>
+              <p>Número de visitantes ideal</p><mat-list-item>{{atractivo.num_visitante_ideal}}</mat-list-item>
+              <p>Fecha ideal de visita</p><mat-list-item>{{atractivo.fecha_ideal_visita}}</mat-list-item>
+              <p>Segmento de mercado potencial</p><mat-list-item>{{atractivo.segmento_mercado_potencial}}</mat-list-item>
+              <p>Servicio</p><mat-list-item>{{atractivo.servicio}}</mat-list-item>
+              <p>Costo</p><mat-list-item>{{atractivo.costo}}</mat-list-item>
+            </mat-list>
+
+            <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+
+          </mat-card-content>
+    </mat-card>
+</div>

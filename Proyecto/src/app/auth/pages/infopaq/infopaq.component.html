@@ -1,0 +1,42 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+
+<div *ngIf="paquete; else divLoading" class="grid p-2">
+  <mat-card class="col-12 sm:col-6">
+    <h1>Paquete</h1>
+    <mat-card-header>
+      <mat-card-title>{{ paquete.nombre }}</mat-card-title>
+      <!-- <mat-card-subtitle> {{paquete.contacto }}</mat-card-subtitle> -->
+    </mat-card-header>
+
+    <img [src]="paquete | paqueteImage" [alt]="paquete.nombre" mat-card-image />
+  </mat-card>
+
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-header>
+      <mat-card-title>Información</mat-card-title>
+      <mat-card-subtitle>{{ paquete.nombre }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+        <p>Días</p><mat-list-item>{{paquete.dia}}</mat-list-item>
+        <p>Noches</p><mat-list-item>{{paquete.noche}}</mat-list-item>
+        <p>Hotel</p><mat-list-item>{{paquete.hotel}}</mat-list-item>
+        <p>Restaurante</p><mat-list-item>{{paquete.restaurante}}</mat-list-item>
+        <p>Experiencia</p><mat-list-item>{{paquete.experiencia}}</mat-list-item>
+        <p>Actividad</p><mat-list-item>{{paquete.actividad}}</mat-list-item>
+        <p>Costo</p><mat-list-item>{{paquete.costo}}</mat-list-item>
+      </mat-list>
+
+
+      <button mat-flat-button color="primary" (click)="goBack()">Regresar al listado</button>
+    </mat-card-content>
+  </mat-card>
+</div>
